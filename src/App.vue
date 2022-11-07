@@ -1,6 +1,6 @@
 <template>
-  <div class="app">
-    <div class="exploit-statuses">
+  <div class="app container">
+    <div class="exploit-statuses pt-5">
       <ExploitStatusVue
         :exploit_status="first_exploit_status"
       ></ExploitStatusVue>
@@ -37,10 +37,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-.app {
-  display: flex;
-  justify-content: center;
-}
-</style>

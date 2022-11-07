@@ -1,6 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
+@import "~bulma";
+
+// Set your brand colors
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
 body {
-    font-family: "Open Sans";
-    background: #ece6d9;
+  font-family: "Open Sans";
+  background: #ece6d9;
+}
+
+body,
+html {
+  height: 100%;
 }

@@ -8,7 +8,7 @@
           v-for="(is_active, tag) in struct_card.tags"
           v-bind:key="tag"
           class="tag is-lowercase ml-2 is-clickable"
-          v-bind:class="is_active ? 'is-success' : 'is-white'"
+          v-bind:class="is_active ? 'is-primary' : 'is-white'"
         >
           {{ tag }}
         </span>

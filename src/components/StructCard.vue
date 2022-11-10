@@ -1,18 +1,18 @@
 <template>
-  <div class="box exploit-status p-3 has-background-light">
-    <p class="is-family-code mb-1">{{ exploit_status.exploitId.name }}</p>
+  <div class="box struct-card p-3 has-background-light">
+    <p class="is-family-code mb-1">{{ struct_card.structId.name }}</p>
     <div class="is-flex is-justify-content-space-between">
-      <p class="has-text-primary">{{ exploit_status.tick.value }}</p>
+      <p class="has-text-primary">{{ struct_card.tick.value }}</p>
       <div class="labels is-flex">
         <span
           class="tag is-lowercase ml-2 is-clickable"
-          v-bind:class="exploit_status.hasStdOut ? 'is-success' : 'is-white'"
+          v-bind:class="struct_card.hasStdOut ? 'is-success' : 'is-white'"
         >
           StdOut
         </span>
         <span
           class="tag is-lowercase ml-2 is-clickable"
-          v-bind:class="exploit_status.hasStdErr ? 'is-success' : 'is-white'"
+          v-bind:class="struct_card.hasStdErr ? 'is-success' : 'is-white'"
         >
           StdErr
         </span>
@@ -22,13 +22,13 @@
 </template>
 
 <script lang="ts">
-import { ExploitStatus } from "@/types/exploit_status";
+import { StructCard } from "@/types/struct_card";
 import { PropType } from "@vue/runtime-core";
 export default {
   props: {
-    exploit_status: {
+    struct_card: {
       required: true,
-      type: Object as PropType<ExploitStatus>,
+      type: Object as PropType<StructCard>,
     },
   },
 };

@@ -1,38 +1,34 @@
 <template>
   <div class="app container">
-    <div class="exploit-statuses pt-5">
-      <ExploitStatusVue
-        :exploit_status="first_exploit_status"
-      ></ExploitStatusVue>
-      <ExploitStatusVue
-        :exploit_status="second_exploit_status"
-      ></ExploitStatusVue>
+    <div class="struct-cardes pt-5">
+      <StructCardVue :struct_card="first_struct_card"></StructCardVue>
+      <StructCardVue :struct_card="second_struct_card"></StructCardVue>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ExploitStatusVue from "./components/ExploitStatus.vue";
-import { ExploitStatus } from "./types/exploit_status";
+import StructCardVue from "./components/StructCard.vue";
+import { StructCard } from "./types/struct_card";
 
 export default defineComponent({
   name: "App",
-  components: { ExploitStatusVue },
+  components: { StructCardVue },
   data() {
     return {
-      first_exploit_status: {
-        exploitId: { name: "catch_em_all.py" },
+      first_struct_card: {
+        structId: { name: "catch_em_all.py" },
         tick: { value: "21" },
         hasStdOut: false,
         hasStdErr: true,
-      } as ExploitStatus,
-      second_exploit_status: {
-        exploitId: { name: "catch_em_all.py" },
+      } as StructCard,
+      second_struct_card: {
+        structId: { name: "catch_em_all.py" },
         tick: { value: "22" },
         hasStdOut: true,
         hasStdErr: false,
-      } as ExploitStatus,
+      } as StructCard,
     };
   },
 });

@@ -8,8 +8,7 @@ interface TickID {
 
 interface StructCard {
   structId: StructID;
-  hasStdOut: boolean;
-  hasStdErr: boolean;
+  tags: { [id: string]: boolean };
   tick: TickID;
 }
 

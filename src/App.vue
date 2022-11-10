@@ -20,14 +20,12 @@ export default defineComponent({
       first_struct_card: {
         structId: { name: "catch_em_all.py" },
         tick: { value: "21" },
-        hasStdOut: false,
-        hasStdErr: true,
+        tags: { StdOut: false, StdErr: true },
       } as StructCard,
       second_struct_card: {
         structId: { name: "catch_em_all.py" },
         tick: { value: "22" },
-        hasStdOut: true,
-        hasStdErr: false,
+        tags: { StdOut: true, StdErr: false },
       } as StructCard,
     };
   },

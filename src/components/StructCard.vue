@@ -5,16 +5,12 @@
       <p class="has-text-primary">{{ struct_card.tick.value }}</p>
       <div class="labels is-flex">
         <span
+          v-for="(is_active, tag) in struct_card.tags"
+          v-bind:key="tag"
           class="tag is-lowercase ml-2 is-clickable"
-          v-bind:class="struct_card.hasStdOut ? 'is-success' : 'is-white'"
+          v-bind:class="is_active ? 'is-success' : 'is-white'"
         >
-          StdOut
-        </span>
-        <span
-          class="tag is-lowercase ml-2 is-clickable"
-          v-bind:class="struct_card.hasStdErr ? 'is-success' : 'is-white'"
-        >
-          StdErr
+          {{ tag }}
         </span>
       </div>
     </div>
